@@ -10,6 +10,7 @@ export default function Dictionary() {
   }
   function handleInputChange(event) {
     setKeyword(event.target.value);
+    console.log(keyword);
   }
   return (
     <div className="Dictionary">
