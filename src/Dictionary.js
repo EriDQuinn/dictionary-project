@@ -20,15 +20,23 @@ export default function Dictionary() {
     setKeyword(event.target.value);
   }
   return (
-    <div className="Dictionary">
-      <form onSubmit={search}>
-        <input
-          type="search"
-          autoFocus={true}
-          onChange={handleInputChange}
-        ></input>
-      </form>
-      <Results data={results} />
+    <div className="Dictionary m-2">
+      <div className="row">
+        <section className="col">
+          <h1 className="mb-5">Dictionary</h1>
+          <form onSubmit={search}>
+            <input
+              type="search"
+              autoFocus={true}
+              onChange={handleInputChange}
+            ></input>
+          </form>
+        </section>
+        <section className="col">
+          {" "}
+          <Results data={results} />
+        </section>
+      </div>
     </div>
   );
 }

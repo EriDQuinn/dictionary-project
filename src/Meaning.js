@@ -4,20 +4,19 @@ import Synonyms from "./Synonyms";
 export default function Meaning(props) {
   console.log(props.meaning);
   return (
-    <div className="Meaning">
+    <div className="Meaning text-justify">
       <h4>{props.meaning.partOfSpeech}</h4>
       {props.meaning.definitions.map(function (definition, index) {
         return (
-          <div key={index}>
+          <div key={index} className="meanings">
             <strong>Definition:</strong>
-
             <p> {definition.definition}</p>
-            <hr />
             <strong>Example:</strong>
             <em>
               <p>{definition.example}</p>
             </em>
             <Synonyms synonyms={definition.synonyms}></Synonyms>
+            <hr />
           </div>
         );
       })}
