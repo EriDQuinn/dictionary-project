@@ -40,13 +40,13 @@ export default function Dictionary() {
               onChange={handleInputChange}
             ></input>
           </form>
+          <section>
+            <Photos photos={photos} />
+          </section>
         </section>
         <section className="col">
           {" "}
           <Results data={results} />
-        </section>
-        <section>
-          <Photos photos={photos} />
         </section>
       </div>
     </div>
